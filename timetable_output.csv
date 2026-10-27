@@ -1,0 +1,12 @@
+Timeslot,Course_Code,Course_Title,Department,Enrolled,Hall_Code,Building,Hall_Capacity,Allocated_Seats
+1,KCS301,Data Structures and Algorithms,CSE,180,AUD-MAIN,Sir CV Raman Auditorium,300,180
+2,KNC301,Universal Human Values and Professional Ethics,ALL-DEPT,250,AUD-MAIN,Sir CV Raman Auditorium,300,250
+3,KCS031,Object-Oriented Programming with Java,CSE-IT,135,AUD-MAIN,Sir CV Raman Auditorium,300,135
+4,KCS303,Discrete Structures and Theory of Logic,CSE-AI,170,AUD-MAIN,Sir CV Raman Auditorium,300,170
+4,KIT301,Database Management Systems,IT,140,AUD-MAIN,Sir CV Raman Auditorium,300,130
+4,KIT301,Database Management Systems,IT,140,TUR-LAB01,Turing AI Lab,60,10
+5,KCS302,Computer Organization and Architecture,CSE,160,AUD-MAIN,Sir CV Raman Auditorium,300,160
+5,KAI301,Artificial Intelligence Foundations,CSE-AI,120,RAM-LH101,Ramanujan Block (Block A),120,120
+5,KDS301,Data Analytics and Visualization,CSE-DS,105,RAM-LH102,Ramanujan Block (Block A),120,105
+5,KEC301,Digital Electronics and Logic Design,ECE,90,KAL-LH301,Kalam Block (Block C),90,90
+6,KAI302,Machine Learning and Pattern Recognition,CSE-AIML,110,RAM-LH101,Ramanujan Block (Block A),120,110

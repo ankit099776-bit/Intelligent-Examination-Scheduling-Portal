@@ -1,0 +1,122 @@
+{
+  "project": "Intelligent Examination Scheduling System",
+  "author": "Ankit Pandey",
+  "erp_id": "2501331520029",
+  "num_timeslots": 6,
+  "mean_utilization": 73.58465608465609,
+  "schedule": [
+    {
+      "timeslot": 1,
+      "utilization_pct": 60.0,
+      "exams": [
+        {
+          "course_code": "KCS301",
+          "course_title": "Data Structures and Algorithms",
+          "enrolled": 180,
+          "hall": "AUD-MAIN",
+          "allocated": 180
+        }
+      ]
+    },
+    {
+      "timeslot": 2,
+      "utilization_pct": 83.33333333333334,
+      "exams": [
+        {
+          "course_code": "KNC301",
+          "course_title": "Universal Human Values and Professional Ethics",
+          "enrolled": 250,
+          "hall": "AUD-MAIN",
+          "allocated": 250
+        }
+      ]
+    },
+    {
+      "timeslot": 3,
+      "utilization_pct": 45.0,
+      "exams": [
+        {
+          "course_code": "KCS031",
+          "course_title": "Object-Oriented Programming with Java",
+          "enrolled": 135,
+          "hall": "AUD-MAIN",
+          "allocated": 135
+        }
+      ]
+    },
+    {
+      "timeslot": 4,
+      "utilization_pct": 86.11111111111111,
+      "exams": [
+        {
+          "course_code": "KCS303",
+          "course_title": "Discrete Structures and Theory of Logic",
+          "enrolled": 170,
+          "hall": "AUD-MAIN",
+          "allocated": 170
+        },
+        {
+          "course_code": "KIT301",
+          "course_title": "Database Management Systems",
+          "enrolled": 140,
+          "hall": "AUD-MAIN",
+          "allocated": 130
+        },
+        {
+          "course_code": "KIT301",
+          "course_title": "Database Management Systems",
+          "enrolled": 140,
+          "hall": "TUR-LAB01",
+          "allocated": 10
+        }
+      ]
+    },
+    {
+      "timeslot": 5,
+      "utilization_pct": 75.39682539682539,
+      "exams": [
+        {
+          "course_code": "KCS302",
+          "course_title": "Computer Organization and Architecture",
+          "enrolled": 160,
+          "hall": "AUD-MAIN",
+          "allocated": 160
+        },
+        {
+          "course_code": "KAI301",
+          "course_title": "Artificial Intelligence Foundations",
+          "enrolled": 120,
+          "hall": "RAM-LH101",
+          "allocated": 120
+        },
+        {
+          "course_code": "KDS301",
+          "course_title": "Data Analytics and Visualization",
+          "enrolled": 105,
+          "hall": "RAM-LH102",
+          "allocated": 105
+        },
+        {
+          "course_code": "KEC301",
+          "course_title": "Digital Electronics and Logic Design",
+          "enrolled": 90,
+          "hall": "KAL-LH301",
+          "allocated": 90
+        }
+      ]
+    },
+    {
+      "timeslot": 6,
+      "utilization_pct": 91.66666666666666,
+      "exams": [
+        {
+          "course_code": "KAI302",
+          "course_title": "Machine Learning and Pattern Recognition",
+          "enrolled": 110,
+          "hall": "RAM-LH101",
+          "allocated": 110
+        }
+      ]
+    }
+  ]
+}

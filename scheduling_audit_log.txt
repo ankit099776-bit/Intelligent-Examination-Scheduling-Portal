@@ -1,0 +1,75 @@
+================================================================================
+         INTELLIGENT EXAMINATION SCHEDULING SYSTEM - AUDIT LOG          
+         Course: Data Structures and Algorithms - II (CCSE0301)         
+         Author: Ankit Pandey (ERP ID: 2501331520029)                   
+================================================================================
+
+1. EXECUTIVE SUMMARY & VALIDATION AUDIT:
+   - Total Courses Scheduled       : 10
+   - Total Conflict Edges Audited  : 31
+   - Conflict Violations Detected  : 0
+   - Room Overcapacity Violations  : 0
+   - Unassigned Courses            : 0
+   - Overall Feasibility Status    : VERIFIED 100% FEASIBLE
+
+2. EXPLAINABILITY RATIONALE (Why courses were scheduled into these slots):
+   [Course KCS301: Data Structures and Algorithms]
+     - Assigned Time Slot : Slot 1
+     - Conflict Degree    : 9 edges
+     - Direct Clashes     : KCS302 (Slot 5), KCS303 (Slot 4), KNC301 (Slot 2), KCS031 (Slot 3), KAI301 (Slot 5), KAI302 (Slot 6), KDS301 (Slot 5), KIT301 (Slot 4), KEC301 (Slot 5)
+     - Rationale          : Placed in lowest clash-free timeslot via DSATUR max saturation order.
+
+   [Course KCS302: Computer Organization and Architecture]
+     - Assigned Time Slot : Slot 5
+     - Conflict Degree    : 5 edges
+     - Direct Clashes     : KCS301 (Slot 1), KCS303 (Slot 4), KNC301 (Slot 2), KCS031 (Slot 3), KIT301 (Slot 4)
+     - Rationale          : Placed in lowest clash-free timeslot via DSATUR max saturation order.
+
+   [Course KCS303: Discrete Structures and Theory of Logic]
+     - Assigned Time Slot : Slot 4
+     - Conflict Degree    : 7 edges
+     - Direct Clashes     : KCS301 (Slot 1), KCS302 (Slot 5), KNC301 (Slot 2), KCS031 (Slot 3), KAI301 (Slot 5), KAI302 (Slot 6), KDS301 (Slot 5)
+     - Rationale          : Placed in lowest clash-free timeslot via DSATUR max saturation order.
+
+   [Course KAI301: Artificial Intelligence Foundations]
+     - Assigned Time Slot : Slot 5
+     - Conflict Degree    : 5 edges
+     - Direct Clashes     : KCS301 (Slot 1), KCS303 (Slot 4), KAI302 (Slot 6), KNC301 (Slot 2), KCS031 (Slot 3)
+     - Rationale          : Placed in lowest clash-free timeslot via DSATUR max saturation order.
+
+   [Course KAI302: Machine Learning and Pattern Recognition]
+     - Assigned Time Slot : Slot 6
+     - Conflict Degree    : 5 edges
+     - Direct Clashes     : KCS301 (Slot 1), KAI301 (Slot 5), KCS303 (Slot 4), KNC301 (Slot 2), KCS031 (Slot 3)
+     - Rationale          : Placed in lowest clash-free timeslot via DSATUR max saturation order.
+
+   [Course KDS301: Data Analytics and Visualization]
+     - Assigned Time Slot : Slot 5
+     - Conflict Degree    : 4 edges
+     - Direct Clashes     : KCS301 (Slot 1), KCS303 (Slot 4), KNC301 (Slot 2), KCS031 (Slot 3)
+     - Rationale          : Placed in lowest clash-free timeslot via DSATUR max saturation order.
+
+   [Course KIT301: Database Management Systems]
+     - Assigned Time Slot : Slot 4
+     - Conflict Degree    : 5 edges
+     - Direct Clashes     : KCS301 (Slot 1), KCS302 (Slot 5), KNC301 (Slot 2), KCS031 (Slot 3), KEC301 (Slot 5)
+     - Rationale          : Placed in lowest clash-free timeslot via DSATUR max saturation order.
+
+   [Course KEC301: Digital Electronics and Logic Design]
+     - Assigned Time Slot : Slot 5
+     - Conflict Degree    : 4 edges
+     - Direct Clashes     : KCS301 (Slot 1), KIT301 (Slot 4), KNC301 (Slot 2), KCS031 (Slot 3)
+     - Rationale          : Placed in lowest clash-free timeslot via DSATUR max saturation order.
+
+   [Course KNC301: Universal Human Values and Professional Ethics]
+     - Assigned Time Slot : Slot 2
+     - Conflict Degree    : 9 edges
+     - Direct Clashes     : KCS301 (Slot 1), KCS302 (Slot 5), KCS303 (Slot 4), KCS031 (Slot 3), KAI301 (Slot 5), KAI302 (Slot 6), KDS301 (Slot 5), KIT301 (Slot 4), KEC301 (Slot 5)
+     - Rationale          : Placed in lowest clash-free timeslot via DSATUR max saturation order.
+
+   [Course KCS031: Object-Oriented Programming with Java]
+     - Assigned Time Slot : Slot 3
+     - Conflict Degree    : 9 edges
+     - Direct Clashes     : KCS301 (Slot 1), KCS302 (Slot 5), KCS303 (Slot 4), KNC301 (Slot 2), KAI301 (Slot 5), KAI302 (Slot 6), KDS301 (Slot 5), KIT301 (Slot 4), KEC301 (Slot 5)
+     - Rationale          : Placed in lowest clash-free timeslot via DSATUR max saturation order.
+

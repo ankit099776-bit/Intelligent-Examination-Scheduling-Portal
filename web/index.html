@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Intelligent Examination Scheduling Dashboard</title>
+<style>
+  :root { --primary: #1A237E; --primary-light: #E8EAF6; --success: #2E7D32; --accent: #C2185B; --bg: #F8F9FA; --card: #FFFFFF; --border: #E0E0E0; --text: #212121; --subtext: #616161; }
+  * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Times New Roman', serif; }
+  body { background: var(--bg); color: var(--text); padding: 24px; line-height: 1.5; }
+  .container { max-width: 1200px; margin: 0 auto; }
+  header { background: linear-gradient(135deg, #1A237E 0%, #283593 100%); color: white; padding: 26px 30px; border-radius: 12px; margin-bottom: 24px; box-shadow: 0 4px 14px rgba(26,35,126,0.18); }
+  header h1 { font-size: 24px; margin-bottom: 6px; }
+  header p { font-size: 13.5px; opacity: 0.9; }
+  .badge { display: inline-block; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+  .badge-success { background: #E8F5E9; color: #2E7D32; border: 1px solid #A5D6A7; }
+  .grid-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px; }
+  .stat-card { background: var(--card); padding: 18px; border-radius: 10px; border: 1px solid var(--border); border-left: 4px solid var(--primary); }
+  .stat-card.green { border-left-color: var(--success); }
+  .stat-card.accent { border-left-color: var(--accent); }
+  .stat-val { font-size: 26px; font-weight: bold; color: var(--primary); }
+  .stat-lbl { font-size: 12px; color: var(--subtext); text-transform: uppercase; font-weight: 600; margin-top: 4px; }
+  .section { background: var(--card); padding: 22px; border-radius: 10px; border: 1px solid var(--border); margin-bottom: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.03); }
+  .section h2 { font-size: 18px; color: var(--primary); margin-bottom: 16px; border-bottom: 2px solid var(--primary-light); padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th, td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { background: #F4F6F9; color: #37474F; font-weight: 600; text-transform: uppercase; font-size: 11.5px; letter-spacing: 0.5px; }
+  tr:hover { background: #FAFAFA; }
+  .slot-pill { display: inline-block; padding: 4px 10px; border-radius: 12px; font-weight: bold; font-size: 12px; background: #E8EAF6; color: #1A237E; }
+  .progress-bar { width: 100%; background: #EEE; height: 8px; border-radius: 4px; overflow: hidden; margin-top: 4px; }
+  .progress-fill { height: 100%; background: #2E7D32; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <div>
+        <h1>Intelligent Examination Scheduling System</h1>
+        <p>Automated Timetable Optimization via Graph Coloring &amp; Dynamic Programming</p>
+      </div>
+      <span class="badge badge-success">Optimal Conflict-Free Schedule</span>
+    </div>
+  </header>
+  <div class="grid-stats">
+    <div class="stat-card"><div class="stat-val">10</div><div class="stat-lbl">Courses Scheduled (|V|)</div></div>
+    <div class="stat-card"><div class="stat-val">31</div><div class="stat-lbl">Conflict Edges Checked (|E|)</div></div>
+    <div class="stat-card green"><div class="stat-val">6</div><div class="stat-lbl">Chromatic Number &chi;(G) (Slots)</div></div>
+    <div class="stat-card accent"><div class="stat-val">73.6%</div><div class="stat-lbl">Room Capacity Utilization</div></div>
+  </div>
+  <div class="section">
+    <h2>Master Examination Timetable & Seating Matrix</h2>
+    <table>
+      <thead><tr><th>Time Slot</th><th>Course Code</th><th>Course Title</th><th>Department</th><th>Enrolled</th><th>Allocated Hall</th><th>Building</th><th>Hall Capacity</th><th>Occupancy</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="slot-pill">Slot 1</span></td>
+          <td><b>KCS301</b></td>
+          <td>Data Structures and Algorithms</td>
+          <td>CSE</td>
+          <td>180</td>
+          <td><b>AUD-MAIN</b></td>
+          <td>Sir CV Raman Auditorium</td>
+          <td>300</td>
+          <td><div>180 / 300 (60%)</div><div class="progress-bar"><div class="progress-fill" style="width:60%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="slot-pill">Slot 2</span></td>
+          <td><b>KNC301</b></td>
+          <td>Universal Human Values and Professional Ethics</td>
+          <td>ALL-DEPT</td>
+          <td>250</td>
+          <td><b>AUD-MAIN</b></td>
+          <td>Sir CV Raman Auditorium</td>
+          <td>300</td>
+          <td><div>250 / 300 (83%)</div><div class="progress-bar"><div class="progress-fill" style="width:83%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="slot-pill">Slot 3</span></td>
+          <td><b>KCS031</b></td>
+          <td>Object-Oriented Programming with Java</td>
+          <td>CSE-IT</td>
+          <td>135</td>
+          <td><b>AUD-MAIN</b></td>
+          <td>Sir CV Raman Auditorium</td>
+          <td>300</td>
+          <td><div>135 / 300 (45%)</div><div class="progress-bar"><div class="progress-fill" style="width:45%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="slot-pill">Slot 4</span></td>
+          <td><b>KCS303</b></td>
+          <td>Discrete Structures and Theory of Logic</td>
+          <td>CSE-AI</td>
+          <td>170</td>
+          <td><b>AUD-MAIN</b></td>
+          <td>Sir CV Raman Auditorium</td>
+          <td>300</td>
+          <td><div>170 / 300 (57%)</div><div class="progress-bar"><div class="progress-fill" style="width:57%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="slot-pill">Slot 4</span></td>
+          <td><b>KIT301</b></td>
+          <td>Database Management Systems</td>
+          <td>IT</td>
+          <td>140</td>
+          <td><b>AUD-MAIN</b></td>
+          <td>Sir CV Raman Auditorium</td>
+          <td>300</td>
+          <td><div>130 / 300 (43%)</div><div class="progress-bar"><div class="progress-fill" style="width:43%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="slot-pill">Slot 4</span></td>
+          <td><b>KIT301</b></td>
+          <td>Database Management Systems</td>
+          <td>IT</td>
+          <td>140</td>
+          <td><b>TUR-LAB01</b></td>
+          <td>Turing AI Lab</td>
+          <td>60</td>
+          <td><div>10 / 60 (17%)</div><div class="progress-bar"><div class="progress-fill" style="width:17%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="slot-pill">Slot 5</span></td>
+          <td><b>KCS302</b></td>
+          <td>Computer Organization and Architecture</td>
+          <td>CSE</td>
+          <td>160</td>
+          <td><b>AUD-MAIN</b></td>
+          <td>Sir CV Raman Auditorium</td>
+          <td>300</td>
+          <td><div>160 / 300 (53%)</div><div class="progress-bar"><div class="progress-fill" style="width:53%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="slot-pill">Slot 5</span></td>
+          <td><b>KAI301</b></td>
+          <td>Artificial Intelligence Foundations</td>
+          <td>CSE-AI</td>
+          <td>120</td>
+          <td><b>RAM-LH101</b></td>
+          <td>Ramanujan Block (Block A)</td>
+          <td>120</td>
+          <td><div>120 / 120 (100%)</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="slot-pill">Slot 5</span></td>
+          <td><b>KDS301</b></td>
+          <td>Data Analytics and Visualization</td>
+          <td>CSE-DS</td>
+          <td>105</td>
+          <td><b>RAM-LH102</b></td>
+          <td>Ramanujan Block (Block A)</td>
+          <td>120</td>
+          <td><div>105 / 120 (88%)</div><div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="slot-pill">Slot 5</span></td>
+          <td><b>KEC301</b></td>
+          <td>Digital Electronics and Logic Design</td>
+          <td>ECE</td>
+          <td>90</td>
+          <td><b>KAL-LH301</b></td>
+          <td>Kalam Block (Block C)</td>
+          <td>90</td>
+          <td><div>90 / 90 (100%)</div><div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div></td>
+        </tr>
+        <tr>
+          <td><span class="slot-pill">Slot 6</span></td>
+          <td><b>KAI302</b></td>
+          <td>Machine Learning and Pattern Recognition</td>
+          <td>CSE-AIML</td>
+          <td>110</td>
+          <td><b>RAM-LH101</b></td>
+          <td>Ramanujan Block (Block A)</td>
+          <td>120</td>
+          <td><div>110 / 120 (92%)</div><div class="progress-bar"><div class="progress-fill" style="width:92%"></div></div></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</body>
+</html>

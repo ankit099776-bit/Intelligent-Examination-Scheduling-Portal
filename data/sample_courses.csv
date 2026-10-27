@@ -1,0 +1,11 @@
+code,title,department,enrolled
+KCS301,Data Structures and Algorithms,CSE,180
+KCS302,Computer Organization and Architecture,CSE,160
+KCS303,Discrete Structures and Theory of Logic,CSE-AI,170
+KAI301,Artificial Intelligence Foundations,CSE-AI,120
+KAI302,Machine Learning and Pattern Recognition,CSE-AIML,110
+KDS301,Data Analytics and Visualization,CSE-DS,105
+KIT301,Database Management Systems,IT,140
+KEC301,Digital Electronics and Logic Design,ECE,90
+KNC301,Universal Human Values and Professional Ethics,ALL-DEPT,250
+KCS031,Object-Oriented Programming with Java,CSE-IT,135

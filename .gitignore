@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+*.log
+web/niet_logo_b64.txt
+build_html.py
+update_app_html.py
